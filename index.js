@@ -35,13 +35,13 @@ async function main() {
         const details = await getDetails(messageText);
         if (details && details.direct_link) {
           try {
-            ctx.reply(`Sending files please wait`);
+            ctx.reply(`decoding your url please wait......`);
             sendFile(details.direct_link, ctx);
           } catch (e) {
             console.error(e); // Log the error for debugging
           }
         } else {
-          ctx.reply('Bot under maintance\n\n Try after 15mins');
+          ctx.reply('Bot under maintance\n\nTry after 15mins');
         }
         console.log(details);
       } else {
